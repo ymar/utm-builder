@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta name="generator" content="Pirate Campaign Generat-arrrrrr!">
+    <title>
+        URL Builder
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+
+            <h1>Pirate Campaign Generat-arrrrrr!</h1>
+
+
+            <div ng-app="myApp">
+                <form>
+
+                    <div class="form-group">
+                        <label>URL</label>
+                        <input ng-model="data.url" class="form-control" placeholder="Fill in the URL to the blog post or landing page">
+                    </div>
+
+          
+
+                    <div class="form-group">
+                        <label>Source</label>
+                        <select ng-bind="?/utm=" ng-model="data.source" class="form-control">
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Twitter</option>
+                        <option value="twitter">Youtube</option>
+                    </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Medium</label>
+                        <select ng-bind="?/utm=" ng-model="data.medium" class="form-control">
+                        <option value="socialorganic">Social Organic</option>
+                        <option value="email">Email</option>
+                        <option value="messenger">Messenger</option>
+                        <option value="paid">Paid</option>
+                        <option value="referal">Referral</option>
+                    </select>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select ng-model="data.country" class="form-control">
+                        <option value="pl">PL</option>
+                        <option value="uk">UK</option>
+                        <option value="de">DE</option>
+                    </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Blog ID</label>
+                        <input class="form-control" type="text" ng-model="data.blogid" placeholder="Blog post ID">
+                    </div>
+
+
+
+
+                    <!-- this is the quicker way to add the content -->
+
+             
+
+
+
+
+
+
+
+                        <div ng-show="data.url" class="form-group alert alert-success" >
+                               
+
+                                                               <label for="exampleTextarea">Your URL, pirate!</label>
+
+                               <div class="input-group">
+
+                               
+
+                                <textarea rows="1" ng-trim="true" class="form-control" id="selectible">{{data.url}}{{(data.source) ? '?/utm_source=' + data.source : ''}}{{(data.medium) ? '&amp;utm_medium=' + data.medium : ''}}{{(data.country) ? '&amp;utm_country=' + data.country : ''}}{{(data.blogid) ? '&amp;utm_blogid=' + data.blogid : ''}}</textarea>
+                            
+                            </br>
+                            
+                            
+                          <button class="btn btn-primary" id="buttonChange" onclick="selectible.select(); changeText();">Select URL</button>
+                        </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                        </div>
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js">
+
+            </script>
+            <script type="text/javascript" src="main.js"></script>
+            <script type="text/javascript">
+                function changeText() {
+                    document.getElementById("buttonChange").innerHTML = 'Ctrl + C to Copy';
+                }
+            </script>
+
+
+    </body>
+
+</html>
